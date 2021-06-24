@@ -1,7 +1,3 @@
-## Books
+## Programming
 
-## Sites
-
-## Courses
-
-## Videos
+## Mathematics
