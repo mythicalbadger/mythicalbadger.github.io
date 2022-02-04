@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<meta name=”viewport” content=”width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="index.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -42,8 +43,44 @@
 						</div>
 						<div class="item-body">
 							<ul>
+								<li>Currently in my second year of studying Computer Science at Mahidol University International College</li>
 								<li><span class="bullet-title">Relevant Courses (so far)</span>: Data Structures and Object Oriented Programming, Systems Skills and Low-level Programming, Principles of Computer Systems and Architecture</li>
-								<li><span class="bullet-title">Cumulative GPA</span>: 3.93</li>
+								<li><span class="bullet-title">Cumulative GPA</span>: 3.93 [<a onclick="toggleGPA()" id="gpatrend" href="#">if you're interested in seeing the <strike>downward</strike> trend</a>]</li>
+								<canvas id="myChart" width="100" height="100" style="display:none;"></canvas>
+								<script>
+									Chart.defaults.global.defaultFontSize = 20;
+									const ctx = document.getElementById('myChart').getContext('2d');
+									const myChart = new Chart(ctx, {
+										type: 'bar',
+										data: {
+											labels: ['T1', 'T2', 'T3', 'T4'],
+											datasets: [{
+												label: 'GPA trends',
+												data: [4, 3.93, 3.95, 3.93],
+												backgroundColor: 'rgb(29, 118, 226, 0.3)',
+												borderWidth: 1
+											}]
+										},
+										options: {
+											responsive: true,
+											scales: {
+												yAxes: [{
+													ticks: {
+														min: 3.50,
+													}
+												}],
+											}
+										}
+									});
+									
+									function toggleGPA() {
+										var x = document.getElementById("myChart");
+										if (x.style.display === "none")
+											x.style.display = "block";
+										else
+											x.style.display = "none";
+									}
+								</script>
 							</ul>
 						</div>
 					</div>

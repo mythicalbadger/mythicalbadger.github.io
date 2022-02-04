@@ -47,11 +47,11 @@ html, body {
 }
 
 #pproject-title-container {
-	background-color: #e2691d;
+	background-color: #1D76E2;
 }
 
 #sproject-title-container {
-	background-color: #e21d76;
+	background-color: #339933;
 }
 
 .item-title {
@@ -97,4 +97,10 @@ html, body {
 	bottom: 0;
 	left: 50%;
     transform: translate(-50%, 0);
+}
+
+#myChart {
+	width: 500px !important;
+	height: 500px !important;
+	margin: auto;
 }
