@@ -24,11 +24,9 @@ html, body {
 }
 
 .section-title {
-	margin-top: 2%;
-	margin-bottom: 2%;
 	text-align: center;
 	font-weight: 600;
-	color: white;
+/*	color: white; */
 }
 
 .section-title-container {
@@ -38,6 +36,7 @@ html, body {
 	margin-bottom: 1%;
 }
 
+/*
 #education-title-container {
 	background-color: #1D76E2;
 }
@@ -53,7 +52,7 @@ html, body {
 #sproject-title-container {
 	background-color: #339933;
 }
-
+*/
 .item-title {
 	font-weight: 550;
 }
@@ -61,6 +60,7 @@ html, body {
 .item-side {
 	font-weight: 350;
 	font-size: 0.7em;
+	font-style: italic;
 }
 
 .row {
@@ -72,7 +72,6 @@ html, body {
 .item-date {
 	font-weight: 200;
 	font-size: 0.7em;
-	font-style: italic;
 	float: right;
 }
 
